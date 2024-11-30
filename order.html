@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання рейсу</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+            color: #333;
+        }
+
+        header {
+    padding: 15px;
+    background: #25323d;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 60px;
+    border-radius: 250px;
+    margin-right: 20px; /* Відступ для логотипу */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto; /* Центрування навігаційного меню */
+}
+
+nav a {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+        .login-btn:hover {
+            background-color:  #25323d;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .form-container img {
+            width: 100px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .form-container h2 {
+            color: #101938;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            background-color: #111730;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color:  #25323d;
+        }
+
+        footer {
+            background: #0e1e42;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="R.webp" alt="Логотип авіакомпанії">
+        <nav>
+            <ul>
+                <a href="index.html">Головна</a>
+                <a href="flights.html">Рейси</a>
+                <a href="order.html">Придбати квиток</a>
+                <a href="about.html">Контакти</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <img src="R.webp" alt="Іконка літака">
+        <h2>Бронювання рейсу</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Ваше ім'я" required>
+            <input type="text" name="passport" placeholder="Номер паспорта" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <select name="from" required>
+                <option value="">Пункт вильоту</option>
+                <option value="Kyiv">Київ</option>
+                <option value="Lviv">Львів</option>
+                <option value="Odesa">Одеса</option>
+            </select>
+            <select name="to" required>
+                <option value="">Пункт призначення</option>
+                <option value="Warsaw">Варшава</option>
+                <option value="London">Лондон</option>
+                <option value="New York">Нью-Йорк</option>
+            </select>
+            <input type="date" name="date" required>
+            <select name="class" required>
+                <option value="">Клас</option>
+                <option value="Economy">Економ</option>
+                <option value="Business">Бізнес</option>
+            </select>
+            <button type="submit">Забронювати</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 Авіакомпанія SkyBeasts. Усі права захищено.</p>
+    </footer>
+</body>
+</html>

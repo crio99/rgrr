@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBeasts - Про нас</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Хедер */
+        header {
+            background-color: #25323d;
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+            height: 70px;
+        }
+
+        header img {
+            width: 60px;
+            display: block;
+            border-radius: 110px;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Основний контент */
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            margin: 20px auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        h1, h2 {
+            color: #242c33;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        footer {
+            background-color: #242c33;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            header img {
+                width: 50px;
+            }
+
+            .logo-container {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1, h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header img {
+                width: 40px;
+            }
+
+            .logo-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1, h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="R.webp" alt="Логотип SkyBeasts">
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="flights.html">Рейси</a>
+            <a href="order.html">Придбати квиток</a>
+            <a href="about.html">Про нас</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="logo-container">
+            <img src="R.webp" alt="Логотип SkyBeasts">
+        </div>
+
+        <h1>Про компанію SkyBeasts</h1>
+        <h2>Хто ми</h2>
+        <p>SkyBeasts — провідна авіакомпанія, яка забезпечує високоякісні рейси за доступними цінами. <br> 
+        Наша мета — зробити подорожі комфортними, безпечними та незабутніми для кожного клієнта. Ми пишаємося своїм сервісом і постійно прагнемо вдосконалення.</p>
+
+        <h2>Наші цінності</h2>
+        <p>Безпека, якість обслуговування та турбота про пасажирів — основа нашої діяльності. Ми ставимо клієнта на перше місце та пропонуємо лише найкращі умови.</p>
+    </main>
+
+    <footer>
+        © 2024 SkyBeasts. Усі права захищені.
+    </footer>
+</body>
+</html>

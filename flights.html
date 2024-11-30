@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBeasts - Рейси</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #242c33;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header img {
+            width: 60px;
+            border-radius: 110px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #218838;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 700px; 
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            background-color: white;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+
+        .slide h2 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #242c33;
+        }
+
+        .slide p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .control-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            background-color: #242c33;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            .slider {
+                max-width: 100%;
+            }
+
+            .slide img {
+                height: 300px; 
+            }
+
+            .slide h2 {
+                font-size: 20px;
+            }
+
+            .slide p {
+                font-size: 14px;
+            }
+
+            .control-button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider {
+                max-width: 100%;
+            }
+
+            .slide img {
+                height: 250px; 
+            }
+
+            .slide h2 {
+                font-size: 18px;
+            }
+
+            .slide p {
+                font-size: 12px;
+            }
+
+            .control-button {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="R.webp" alt="Логотип авіакомпанії">
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="flights.html">Рейси</a>
+            <a href="order.html">Придбати квиток</a>
+            <a href="about.html">Про нас</a>
+        </nav>
+        <button class="login-button">Вхід</button>
+    </header>
+
+    <main>
+        <h1>Популярні рейси</h1>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="NYC.jpg" alt="Київ - Нью-Йорк">
+                    <h2>Київ - Нью-Йорк</h2>
+                    <p>Ціна: $500</p>
+                </div>
+                <div class="slide">
+                    <img src="lnd.jpg" alt="Київ - Лондон">
+                    <h2>Київ - Лондон</h2>
+                    <p>Ціна: $300</p>
+                </div>
+                <div class="slide">
+                    <img src="par.jfif" alt="Київ - Париж">
+                    <h2>Київ - Париж</h2>
+                    <p>Ціна: $350</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="control-button" onclick="prevSlide()">‹</button>
+                <button class="control-button" onclick="nextSlide()">›</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2024 SkyBeasts. Усі права захищені.
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        }
+    </script>
+</body>
+</html>

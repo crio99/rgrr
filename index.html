@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авіакомпанія SkyBeasts - Головна</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e2c3a;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 10px 0;
+            font-size: 28px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #f9f8f3;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            margin: 20px auto;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 80%;
+            height: auto;
+            border-radius: 150px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        main h2 {
+            font-size: 24px;
+            color: #193c5f;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #193c5f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            .logo-container {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ласкаво просимо до SkyBeasts</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="flights.html">Рейси</a>
+            <a href="order.html">Придбати квиток</a>
+            <a href="about.html">Про нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="logo-container">
+            <img src="R.webp" alt="Логотип SkyBeasts">
+        </div>
+        <h2>Подорожуйте з комфортом!</h2>
+        <p>Ми пропонуємо найкращі авіарейси за вигідними цінами.</p>
+    </main>
+
+    <footer>
+        © 2024 SkyBeasts. Усі права захищені.
+    </footer>
+</body>
+</html>
